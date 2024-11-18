@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Ol - Bili.com</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Header Navigation -->
+        <header class="header">
+            <div class="top-header">
+                <a href="/" class="logo">bili.com</a>
+                
+                <div class="search-container">
+                    <input type="search" placeholder="Merhaba, ne arıyorsun?" class="search-input">
+                </div>
+
+                <div class="user-actions">
+                    <a href="kitapligim.html" class="user-link">
+                        <span class="icon">📚</span>
+                        <span>Kitaplığım</span>
+                    </a>
+                    <a href="sepetim.html" class="user-link">
+                        <span class="icon">🛒</span>
+                        <span>Sepetim</span>
+                    </a>
+                    <div class="user-dropdown">
+                        <a href="/login.html" class="user-link">
+                            <span class="icon">👤</span>
+                            <span>Giriş Yap</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                            <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="yeniler.html">YENİLER</a></li>
+                    <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
+                    <li><a href="kategoriler.html">KATEGORİLER</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Auth Container -->
+        <div class="auth-container">
+            <h1 class="auth-title">Bili'e Hoşgeldin!</h1>
+            <p class="auth-subtitle">Alışveriş yapabilmek için lütfen üye olun.</p>
+            
+            <div class="auth-tabs">
+                <a href="/login.html" class="auth-tab">Giriş Yap</a>
+                <a href="/register.html" class="auth-tab active">Üye Ol</a>
+            </div>
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Adınız" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="Soyadınız" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="E-posta adresi" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="E-posta adresi (tekrar)" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" placeholder="Şifre" required>
+                    <button type="button" class="password-toggle">👁️</button>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" placeholder="Şifreniz (tekrar)" required>
+                    <button type="button" class="password-toggle">👁️</button>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="marketing">
+                    <label for="marketing">Bana özel ayrıcalık ve indirimlerden haberdar olmak istiyorum.</label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">
+                        <a href="/terms">Üyelik Sözleşmesi</a>'ni okudum ve kabul ediyorum.
+                    </label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">
+                        <a href="/privacy">Kişisel Verilerin Korunması Kanunu Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
+                    </label>
+                </div>
+
+                <button type="submit" class="auth-button">
+                    Üye Ol
+                    <span class="button-icon">→</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

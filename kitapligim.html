@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitaplığım - Bili.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header kısmı index.html ile aynı -->
+    <header class="header">
+        <div class="top-header">
+            <a href="/" class="logo">bili.com</a>
+            
+            <div class="search-container">
+                <input type="search" 
+                       placeholder="Merhaba, ne arıyorsun?" 
+                       class="search-input">
+            </div>
+
+            <div class="user-actions">
+                <a href="kitapligim.html" class="user-link">
+                    <span class="icon">📚</span>
+                    <span>Kitaplığım</span>
+                </a>
+                <a href="/sepetim" class="user-link">
+                    <span class="icon">🛒</span>
+                    <span>Sepetim</span>
+                </a>
+                <div class="user-dropdown">
+                    <a href="/login.html" class="user-link">
+                        <span class="icon">👤</span>
+                        <span>Giriş Yap</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="yeniler.html">YENİLER</a></li>
+                <li><a href="/cok-satanlar">ÇOK SATANLAR</a></li>
+                <li><a href="/kategoriler">KATEGORİLER</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="/">Anasayfa</a> • <span>Kitaplığım</span>
+        </div>
+
+        <div class="library-container">
+            <div class="library-tabs">
+                <button class="library-tab active" data-tab="interested">İlgilendiklerim</button>
+                <button class="library-tab" data-tab="read">Okuduklarım</button>
+                <button class="library-tab" data-tab="purchased">Satın Aldıklarım</button>
+            </div>
+
+            <!-- İlgilendiklerim Tab -->
+            <div class="library-content active" id="interested">
+                <div class="book-card">
+                    <img src="images/book2.jpeg" alt="Al Capone">
+                    <div class="book-info">
+                        <h3>Renki Odalar </h3>
+                        <p class="author">S. Meralli</p>
+                        <div class="price-info">
+                            <span class="old-price">400,00 TL</span>
+                            <span class="current-price">315,00 TL</span>
+                        </div>
+                        <button class="add-to-cart">Sepete Ekle</button>
+                        <button class="remove-book">×</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Okuduklarım Tab -->
+            <div class="library-content" id="read">
+                <div class="empty-state">
+                    <img src="images/meBook.jpg" alt="Boş kitaplık" class="empty-icon">
+                    <h3>Henüz Hiç Kitap Okumamışsınız!</h3>
+                    <p>Okuduğunuz kitapları buraya ekleyerek kütüphanenizi oluşturabilirsiniz.</p>
+                    <a href="yeniler.html" class="browse-books">Kitaplara Göz At</a>
+                </div>
+            </div>
+
+            <!-- Satın Aldıklarım Tab -->
+            <div class="library-content" id="purchased">
+                <div class="empty-state">
+                    <img src="images/sepet.png" alt="Boş sepet" class="empty-icon">
+                    <h3>Henüz Hiç Alışveriş Yapmamışsınız!</h3>
+                    <p>Yeni kitaplar keşfederek okuma serüveninize başlayabilirsiniz.</p>
+                    <a href="yeniler.html" class="browse-books">Alışverişe Başla</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.library-tab');
+        const contents = document.querySelectorAll('.library-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html> 

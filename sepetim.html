@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim - Bili.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Top header with logo and search -->
+        <div class="top-header">
+            <a href="/" class="logo">bili.com</a>
+            
+            <div class="search-container">
+                <input type="search" 
+                       placeholder="Merhaba, ne arıyorsun?" 
+                       class="search-input">
+            </div>
+
+            <div class="user-actions">
+                <a href="kitapligim.html" class="user-link">
+                    <span class="icon">📚</span>
+                    <span>Kitaplığım</span>
+                </a>
+                <a href="sepetim.html" class="user-link">
+                    <span class="icon">🛒</span>
+                    <span>Sepetim</span>
+                </a>
+                <div class="user-dropdown">
+                    <a href="/login.html" class="user-link">
+                        <span class="icon">👤</span>
+                        <span>Giriş Yap</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="yeniler.html">YENİLER</a></li>
+                <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
+                <li><a href="kategoriler.html">KATEGORİLER</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h1>Sepetim (2 Ürün)</h1>
+        
+        <div class="cart-layout">
+            <div class="cart-items">
+                <!-- Cart Item 1 -->
+                <div class="cart-item">
+                    <img src="images/küvet.jpeg" alt="Küvette Bulunan Günce" class="cart-item__image">
+                    <div class="cart-item__details">
+                        <h2 class="cart-item__title">Küvette Bulunan Günce</h2>
+                        <p class="cart-item__author">Stanislaw Lem</p>
+                        <p class="cart-item__publisher">Alfa Yayınları</p>
+                    </div>
+                    <div class="cart-item__quantity">
+                        <button class="quantity-btn decrease" aria-label="Azalt">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn increase" aria-label="Artır">+</button>
+                    </div>
+                    <p class="cart-item__price">193,55 TL</p>
+                    <button class="cart-item__remove" aria-label="Ürünü Kaldır">
+                        <span class="icon">🗑️</span>
+                    </button>
+                </div>
+
+                <!-- Cart Item 2 -->
+                <div class="cart-item">
+                    <img src="images/orkestra.jpeg" alt="Goebbels'in Propaganda Orkestrası" class="cart-item__image">
+                    <div class="cart-item__details">
+                        <h2 class="cart-item__title">Goebbels'in Propaganda Orkestrası</h2>
+                        <p class="cart-item__author">Demian Lienhard</p>
+                        <p class="cart-item__publisher">Delidolu</p>
+                    </div>
+                    <div class="cart-item__quantity">
+                        <button class="quantity-btn decrease" aria-label="Azalt">-</button>
+                        <input type="number" value="1" min="1" class="quantity-input">
+                        <button class="quantity-btn increase" aria-label="Artır">+</button>
+                    </div>
+                    <p class="cart-item__price">180,91 TL</p>
+                    <button class="cart-item__remove" aria-label="Ürünü Kaldır">
+                        <span class="icon">🗑️</span>
+                    </button>
+                </div>
+            </div>
+
+            <aside class="cart-summary">
+                <div class="discount-code">
+                    <h2>İndirim Kodu Gir</h2>
+                    <div class="discount-input">
+                        <input type="text" placeholder="Kodunuzu giriniz" aria-label="İndirim kodu">
+                        <button class="apply-discount">Uygula</button>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Sipariş Özeti</h2>
+                    <div class="summary-row">
+                        <span>Ürün Toplamı</span>
+                        <span>374,46 TL</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Kargo</span>
+                        <span>49,00 TL</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>Toplam</span>
+                        <span>423,46 TL</span>
+                    </div>
+                    <button class="checkout-button">Sepeti Onayla</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+</body>
+</html> 

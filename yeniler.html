@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeni Çıkanlar - Barrazbili.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Top header with logo and search -->
+        <div class="top-header">
+            <a href="/" class="logo">barrazbili.com</a>
+            
+            <div class="search-container">
+                <input type="search" 
+                       placeholder="Merhaba, ne arıyorsun?" 
+                       class="search-input">
+            </div>
+
+            <div class="user-actions">
+                <a href="kitapligim.html" class="user-link">
+                    <span class="icon">📚</span>
+                    <span>Kitaplığım</span>
+                </a>
+                <a href="sepetim.html" class="user-link">
+                    <span class="icon">🛒</span>
+                    <span>Sepetim</span>
+                </a>
+                <div class="user-dropdown">
+                    <a href="/login.html" class="user-link">
+                        <span class="icon">👤</span>
+                        <span>Giriş Yap</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="yeniler.html">YENİLER</a></li>
+                <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
+                <li><a href="kategoriler.html">KATEGORİLER</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="/">Anasayfa</a> • <span>Yeniler</span>
+        </div>
+
+        <div class="products-container">
+            <aside class="filters">
+                <h2>Kategoriler</h2>
+                <div class="filter-section">
+                    <h3>Yayınevi</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Yayınevi ara">
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="hermes">
+                        <label for="hermes">Hermes Yayınları (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="yky">
+                        <label for="yky">Yapı Kredi Yayınları (3)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="iletisim">
+                        <label for="iletisim">İletişim Yayınları (2)</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Yazar</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Yazar ara">
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="ismail">
+                        <label for="ismail">İsmail Yüksel (1)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="orhan">
+                        <label for="orhan">Orhan Pamuk (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="yasar">
+                        <label for="yasar">Yaşar Kemal (2)</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Fiyat</h3>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-100">
+                        <label for="price-100">100 TL - 150 TL (3)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-150">
+                        <label for="price-150">150 TL - 200 TL (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-200">
+                        <label for="price-200">200 TL ve üzeri (2)</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products">
+                <div class="products-header">
+                    <h1>"Yeni Ürünler" <span>7 Ürün Listeleniyor</span></h1>
+                    <div class="view-options">
+                        <select class="sort-select">
+                            <option>En Yeniler</option>
+                            <option>En Çok Satanlar</option>
+                            <option>Fiyat (Artan)</option>
+                            <option>Fiyat (Azalan)</option>
+                        </select>
+                        <div class="view-buttons">
+                            <button class="view-btn grid active">⊞</button>
+                            <button class="view-btn list">☰</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Mock Kitap 1 -->
+                    <div class="product-card">
+                        <img src="images/initum.jpeg" alt="İnitium İntum">
+                        <div class="product-details">
+                            <h3>İnitium İntum</h3>
+                            <p class="author">İsmail Yüksel</p>
+                            <p class="publisher">Hermes Yayınları</p>
+                            <div class="price-action">
+                                <span class="price">171,00 TL</span>
+                                <button class="add-to-cart">Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mock Kitap 2 -->
+                    <div class="product-card">
+                        <img src="images/veba.jpeg" alt="Veba Geceleri">
+                        <div class="product-details">
+                            <h3>Veba Geceleri</h3>
+                            <p class="author">Orhan Pamuk</p>
+                            <p class="publisher">Yapı Kredi Yayınları</p>
+                            <div class="price-action">
+                                <span class="price">145,00 TL</span>
+                                <button class="add-to-cart">Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mock Kitap 3 -->
+                    <div class="product-card">
+                        <img src="images/kuş.jpeg" alt="Kuşlar da Gitti">
+                        <div class="product-details">
+                            <h3>Kuşlar da Gitti</h3>
+                            <p class="author">Yaşar Kemal</p>
+                            <p class="publisher">Yapı Kredi Yayınları</p>
+                            <div class="price-action">
+                                <span class="price">120,00 TL</span>
+                                <button class="add-to-cart">Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mock Kitap 4 -->
+                    <div class="product-card">
+                        <img src="images/sosyoloji.jpeg" alt="Sosyoloji">
+                        <div class="product-details">
+                            <h3>Sosyoloji Başlangıç Okumaları</h3>
+                            <p class="author">Anthony Giddens</p>
+                            <p class="publisher">İletişim Yayınları</p>
+                            <div class="price-action">
+                                <span class="price">220,00 TL</span>
+                                <button class="add-to-cart">Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diğer mock kitaplar buraya eklenebilir -->
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html> 

@@ -3,64 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babil Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bili.com</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-container">
-            <div class="logo">babil<span>.com</span></div>
-            <div class="search-bar">
-                <input type="text" placeholder="Merhaba, ne arıyorsun?">
-                <button>🔍</button>
+    <header class="header">
+        <!-- Top header with logo and search -->
+        <div class="top-header">
+            <a href="/" class="logo">bili.com</a>
+            
+            <div class="search-container">
+                <input type="search" 
+                       placeholder="Merhaba, ne arıyorsun?" 
+                       class="search-input">
             </div>
-            <div class="header-icons">
-                <span>Kitaplığım</span>
-                <span>Sepetim</span>
-                <span>Giriş Yap</span>
+
+            <div class="user-actions">
+                <a href="kitapligim.html" class="user-link">
+                    <span class="icon">📚</span>
+                    <span>Kitaplığım</span>
+                </a>
+                <a href="sepetim.html" class="user-link">
+                    <span class="icon">🛒</span>
+                    <span>Sepetim</span>
+                </a>
+                <div class="user-dropdown">
+                    <a href="/login.html" class="user-link">
+                        <span class="icon">👤</span>
+                        <span>Giriş Yap</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <nav>
-            <ul>
-                <li>YENİLER</li>
-                <li>ÇOK SATANLAR</li>
-                <li>KATEGORİLER</li>
-                <li>BABİL TALKS</li>
-                <li>BABİL ÇOCUK</li>
-                <li>BABİL BLOG</li>
+
+        <!-- Main navigation -->
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="yeniler.html">YENİLER</a></li>
+                <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
+                <li><a href="kategoriler.html">KATEGORİLER</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Banner Section with Slider -->
-    <section class="banner">
-        <div class="slider">
-            <div class="slide">
-                <div class="books-row">
-                    <div class="book"><img src="images/book1.jpg" alt="Kitap 1"></div>
-                    <div class="book"><img src="images/book2.jpg" alt="Kitap 2"></div>
-                    <div class="book"><img src="images/book3.jpg" alt="Kitap 3"></div>
-                    <div class="book"><img src="images/book4.jpg" alt="Kitap 4"></div>
+    <main class="main-content">
+        <!-- Yeni Çıkanlar Slider -->
+        <section class="featured-books">
+            <h2>Yeni Çıkanlar</h2>
+            <div class="book-slider">
+                <div class="slider-container">
+                    <!-- Slide 1 -->
+                    <div class="book-slide">
+                        <img src="images/deli.jpeg" alt="Bir eleştiri ustası Nurdan Gürbilek">
+                        <div class="slide-content">
+                            <h3>Bir eleştiri ustası Nurdan Gürbilek</h3>
+                            <p>Sessizin Payı, İkinci Hayat, Vitrinde Yaşamak ve daha fazlası...</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="book-slide">
+                        <img src="images/nurdan.jpg" alt="Dilin kökenine ve doğasına dair harikulade bir araştırma">
+                        <div class="slide-content">
+                            <h3>Dilin kökenine ve doğasına dair harikulade bir araştırma</h3>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="book-slide">
+                        <img src="images/orkestra.jpeg" alt="Yeni Çıkan Kitaplar">
+                        <div class="slide-content">
+                            <h3>Bu Haftanın Yeni Kitapları</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="slider-nav prev" aria-label="Önceki">❮</button>
+                <button class="slider-nav next" aria-label="Sonraki">❯</button>
+
+                <!-- Slider dots -->
+                <div class="slider-dots">
+                    <button class="dot active" aria-label="Slide 1"></button>
+                    <button class="dot" aria-label="Slide 2"></button>
+                    <button class="dot" aria-label="Slide 3"></button>
                 </div>
             </div>
-            <div class="slide">
-                <div class="books-row">
-                    <div class="book"><img src="images/book5.jpg" alt="Kitap 5"></div>
-                    <div class="book"><img src="images/book6.jpg" alt="Kitap 6"></div>
-                    <div class="book"><img src="images/book7.jpg" alt="Kitap 7"></div>
-                    <div class="book"><img src="images/book8.jpg" alt="Kitap 8"></div>
+        </section>
+
+        <!-- Kitap Grid'i -->
+        <section class="new-books">
+            <h2>Yeni Çıkanlar</h2>
+            <div class="book-grid">
+                <!-- Kitap 1 -->
+                <div class="book-card">
+                    <img src="images/hilkat.jpeg" alt="Hilkat Garibesi">
+                    <div class="book-info">
+                        <h3>Hilkat Garibesi</h3>
+                        <p class="author">Serdar Uslu</p>
+                        <p class="price">138,25 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 2 -->
+                <div class="book-card">
+                    <img src="images/küvet.jpeg" alt="Küvette Bulunan Günce">
+                    <div class="book-info">
+                        <h3>Küvette Bulunan Günce</h3>
+                        <p class="author">Stanislaw Lem</p>
+                        <p class="price">193,55 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 3 -->
+                <div class="book-card">
+                    <img src="images/orkestra.jpeg">
+                    <div class="book-info">
+                        <h3>Goebbels'in Propaganda</h3>
+                        <p class="author">Demian Lienhard</p>
+                        <p class="price">180,91 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 4 -->
+                <div class="book-card">
+                    <img src="images/AlCapone.jpg" alt="Al Capone">
+                    <div class="book-info">
+                        <h3>Al Capone</h3>
+                        <p class="author">S. Meralli</p>
+                        <p class="price">315,00 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 5 -->
+                <div class="book-card">
+                    <img src="images/beyaz.jpg" alt="Beyaz Mitolojiler">
+                    <div class="book-info">
+                        <h3>Beyaz Mitolojiler</h3>
+                        <p class="author">Robert J.C Young</p>
+                        <p class="price">276,50 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 6 -->
+                <div class="book-card">
+                    <img src="images/bilim-ve-din.webp" alt="Bilim ve Din">
+                    <div class="book-info">
+                        <h3>Bilim ve Din</h3>
+                        <p class="author">Thomas Dixon, Adam R. Shapiro</p>
+                        <p class="price">59,06 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="slide">
-                <div class="books-row">
-                    <div class="book"><img src="images/book9.jpg" alt="Kitap 9"></div>
-                    <div class="book"><img src="images/book10.jpg" alt="Kitap 10"></div>
-                    <div class="book"><img src="images/book11.jpg" alt="Kitap 11"></div>
-                    <div class="book"><img src="images/book12.jpg" alt="Kitap 12"></div>
+        </section>
+
+        <!-- Editörün Seçtikleri -->
+        <section class="editors-picks">
+            <div class="section-header">
+                <h2>Editörün Seçtikleri</h2>
+                <a href="#" class="see-all">Tümünü Gör</a>
+            </div>
+            <div class="book-grid">
+                <!-- Kitap 1 -->
+                <div class="book-card">
+                    <img src="images/metafizik1.jpeg" alt="Metafizik">
+                    <div class="book-info">
+                        <h3>Metafizik</h3>
+                        <p class="author">Aristoteles</p>
+                        <p class="price">474,00 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kitap 2 -->
+                <div class="book-card">
+                    <img src="images/moskova.jpeg" alt="Moskova Yanıyor">
+                    <div class="book-info">
+                        <h3>Moskova Yanıyor</h3>
+                        <p class="author">Grigori Petroviç Danilevski</p>
+                        <p class="price">126,40 TL</p>
+                        <a href="#" class="add-to-cart-btn">
+                            <span class="cart-icon">🛒</span>
+                            Sepete Ekle
+                        </a>
+                    </div>
+                </div>
+
+               
+            </div>
+        </section>
+
+        <!-- Banner Grid -->
+        <section class="banner-grid">
+            <a href="#" class="banner-item">
+                <img src="images/metafizik.webp" alt="Bir felsefe klasiği: Metafizik">
+                <div class="banner-content">
+                    <h3>Bir felsefe klasiği: METAFİZİK</h3>
+                </div>
+            </a>
+            <a href="#" class="banner-item">
+                <img src="images/nikos.jpg" alt="Komşunun büyük ustası Nikos Kazancakis">
+                <div class="banner-content">
+                    <h3>Komşunun büyük ustası Nikos Kazancakis</h3>
+                </div>
+            </a>
+            <a href="#" class="banner-item">
+                <img src="images/bozkır.jpeg" alt="Bozkırdan dünyaya yayılan ses: Cengiz Aytmatov">
+                <div class="banner-content">
+                    <h3>Bozkırdan dünyaya yayılan ses: Cengiz Aytmatov</h3>
+                </div>
+            </a>
+            <a href="#" class="banner-item">
+                <img src="images/deli.jpeg" alt="deliye övgü">
+                <div class="banner-content">
+                    <h3>Deliye Övgü</h3>
+                </div>
+            </a>
+        </section>
+
+        <!-- Ayın Yazarı -->
+        <section class="author-of-month">
+            <h2>Ayın Yazarı</h2>
+            <div class="author-content">
+                <div class="author-info">
+                    <img src="images/AlCapone.jpg" alt="Gabriel García Márquez">
+                    <div class="author-description">
+                        <h3>Gabriel García Márquez</h3>
+                        <p>"Gabo" yahut "Gabito" olarak da bilinen Nobel Ödüllü Kolombiyalı yazar Gabriel García Márquez, büyülü gerçekçilik denen üslup tarzının önde gelen temsilcilerinden biridir. Yalnızca Latin Amerika edebiyatının değil, dünya edebiyatının da en meşhur isimlerinden Márquez'in eserleri onlarca dile çevrildi ve dünyanın pek çok yerinden milyonlarca okura ulaştı. 17 Nisan 2014'te akciğer iltihabı nedeniyle Mexico City'de hayatını kaybeden yazar, ardında onlarca ölümsüz hikaye ve roman bıraktı.</p>
+                    </div>
+                </div>
+                <div class="author-books">
+                    <div class="book-card">
+                        <img src="images/kolera.jpeg" alt="Kolera Günlerinde Aşk">
+                        <div class="book-info">
+                            <h3>Kolera Günlerinde Aşk</h3>
+                            <p class="author">Gabriel García Márquez</p>
+                            <p class="price">310,00 TL</p>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/yalnızlık.jpeg" alt="Yüzyıllık Yalnızlık">
+                        <div class="book-info">
+                            <h3>Yüzyıllık Yalnızlık</h3>
+                            <p class="author">Gabriel García Márquez</p>
+                            <p class="price">286,75 TL</p>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
+                    <div class="book-card">
+                        <img src="images/doğu.jpeg" alt="Doğu Avrupa'da Yolculuk">
+                        <div class="book-info">
+                            <h3>Doğu Avrupa'da Yolculuk</h3>
+                            <p class="author">Gabriel García Márquez</p>
+                            <p class="price">151,13 TL</p>
+                            <a href="#" class="add-to-cart-btn">Sepete Ekle</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+       
+
+
+      
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+    <script src="slider.js"></script>
 </body>
 </html>

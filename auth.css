@@ -1,0 +1,368 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+}
+
+/* Page container */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+}
+
+.top-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Auth container */
+.auth-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Main navigation */
+.main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Navigation styles */
+.nav-list a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .top-header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .auth-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Title and subtitle */
+.auth-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Tabs */
+.auth-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.auth-tab {
+    flex: 1;
+    text-align: center;
+    padding: 1rem;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+}
+
+.auth-tab.active {
+    color: #ff6b00;
+}
+
+.auth-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff6b00;
+}
+
+/* Form styles */
+.form-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ff6b00;
+}
+
+/* Password toggle button */
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Checkbox styles */
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-top: 0.3rem;
+}
+
+.checkbox label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.checkbox a {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+/* Submit button */
+.auth-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.auth-button:hover {
+    background-color: #e65c00;
+}
+
+.button-icon {
+    font-size: 1.2rem;
+}
+
+/* Forgot password link */
+.forgot-password {
+    margin-left: auto;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+    color: #ff6b00;
+}
+
+/* Logo */
+.logo {
+    color: #ff6b00;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Search container */
+.search-container {
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* User actions */
+.user-actions {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.user-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Footer styles */
+.footer {
+    margin-top: auto;
+    background-color: #f8f8f8;
+    padding: 1rem 2rem;
+    border-top: 1px solid #eee;
+}
+
+.footer .main-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .nav-list a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.footer .nav-list a:hover {
+    color: #ff6b00;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer .nav-list {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* Mevcut auth-container stillerini güncelle */
+.auth-container {
+    margin: 2rem auto;
+    /* Diğer stiller aynı kalacak */
+}
+
+/* Dropdown styles - index.html ile aynı */
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.dropdown-button {
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.dropdown-button.primary {
+    background-color: #ff6b00;
+    color: white;
+}
+
+.dropdown-button.primary:hover {
+    background-color: #e65c00;
+}
+
+.dropdown-button.secondary {
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.dropdown-button.secondary:hover {
+    background-color: #f5f5f5;
+}
+
+/* Icon styles */
+.icon {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+} 

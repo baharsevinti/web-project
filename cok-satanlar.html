@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çok Satanlar - Barrazbili.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header kısmı index.html ile aynı -->
+    <header class="header">
+        <div class="top-header">
+            <a href="/" class="logo">barrazbili.com</a>
+            
+            <div class="search-container">
+                <input type="search" 
+                       placeholder="Merhaba, ne arıyorsun?" 
+                       class="search-input">
+            </div>
+
+            <div class="user-actions">
+                <a href="kitapligim.html" class="user-link">
+                    <span class="icon">📚</span>
+                    <span>Kitaplığım</span>
+                </a>
+                <a href="/sepetim" class="user-link">
+                    <span class="icon">🛒</span>
+                    <span>Sepetim</span>
+                </a>
+                <div class="user-dropdown">
+                    <a href="/login.html" class="user-link">
+                        <span class="icon">👤</span>
+                        <span>Giriş Yap</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
+                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a href="yeniler.html">YENİLER</a></li>
+                <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
+                <li><a href="/kategoriler">KATEGORİLER</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="breadcrumb">
+            <a href="/">Anasayfa</a> • <span>Çok Satanlar</span>
+        </div>
+
+        <div class="products-container">
+            <aside class="filters">
+                <h2>Kategoriler</h2>
+                <div class="filter-section">
+                    <h3>Edebiyat</h3>
+                    <div class="filter-item">
+                        <input type="checkbox" id="edebiyat">
+                        <label for="edebiyat">Edebiyat (11)</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Sosyal Bilimler</h3>
+                    <div class="filter-item">
+                        <input type="checkbox" id="sosyoloji">
+                        <label for="sosyoloji">Sosyoloji (4)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="felsefe">
+                        <label for="felsefe">Felsefe (4)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="psikoloji">
+                        <label for="psikoloji">Psikoloji (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="tarih">
+                        <label for="tarih">Tarih (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="insanvetoplum">
+                        <label for="insanvetoplum">İnsan ve Toplum (2)</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Yayınevi</h3>
+                    <div class="search-box">
+                        <input type="text" placeholder="Yayınevi ara">
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="babil">
+                        <label for="babil">Babil Kitap (5)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="is-bankasi">
+                        <label for="is-bankasi">İş Bankası Kültür Yayınları (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="domingo">
+                        <label for="domingo">Domingo Yayınevi (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="metis">
+                        <label for="metis">Metis Yayınları (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="sel">
+                        <label for="sel">Sel Yayıncılık (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="ketebe">
+                        <label for="ketebe">Ketebe Yayınları (1)</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Fiyat</h3>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-50">
+                        <label for="price-50">50 - 60 TL (1)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-80">
+                        <label for="price-80">80 - 90 TL (1)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-90">
+                        <label for="price-90">90 - 100 TL (2)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-100">
+                        <label for="price-100">100 - 110 TL (1)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-110">
+                        <label for="price-110">110 - 120 TL (3)</label>
+                    </div>
+                    <div class="filter-item">
+                        <input type="checkbox" id="price-120">
+                        <label for="price-120">120 - 130 TL (3)</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="products">
+                <div class="products-header">
+                    <h1>"Çok Satan Ürünler" <span>24 Ürün Listeleniyor</span></h1>
+                    <div class="view-options">
+                        <select class="sort-select">
+                            <option>En Yeniler</option>
+                            <option>En Çok Satanlar</option>
+                            <option>Fiyat (Artan)</option>
+                            <option>Fiyat (Azalan)</option>
+                        </select>
+                        <div class="view-buttons">
+                            <button class="view-btn grid active">⊞</button>
+                            <button class="view-btn list">☰</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Örnek Ürün 1 -->
+                    <div class="product-card">
+                        <img src="images/kafa.jpeg" alt="Kafayı Yemeden Yaşama Sanatı">
+                        <div class="product-details">
+                            <h3>Kafayı Yemeden Yaşama Sanatı</h3>
+                            <p class="author">Ezgi Akgül</p>
+                            <p class="publisher">Nesil Yayınları</p>
+                            <div class="price-action">
+                                <span class="price">Tükendi</span>
+                                <button class="add-to-cart" disabled>Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Örnek Ürün 2 -->
+                    <div class="product-card">
+                        <img src="images/antik.jpg" alt="Antik İnançların İzinde">
+                        <div class="product-details">
+                            <h3>Antik İnançların İzinde</h3>
+                            <p class="author">Kurşad Demirci</p>
+                            <p class="publisher">Kronik Kitap</p>
+                            <div class="price-action">
+                                <span class="price">111,65 TL</span>
+                                <button class="add-to-cart">Sepete Ekle</button>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html> 
