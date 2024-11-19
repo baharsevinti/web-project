@@ -4,52 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bili.com</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header class="header">
-        <!-- Top header with logo and search -->
-        <div class="top-header">
-            <a href="/" class="logo">bili.com</a>
-            
-            <div class="search-container">
-                <input type="search" 
-                       placeholder="Merhaba, ne arıyorsun?" 
-                       class="search-input">
-            </div>
+    <div id="header-placeholder"></div>
+<script>
+    fetch('component/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
 
-            <div class="user-actions">
-                <a href="kitapligim.html" class="user-link">
-                    <span class="icon">📚</span>
-                    <span>Kitaplığım</span>
-                </a>
-                <a href="sepetim.html" class="user-link">
-                    <span class="icon">🛒</span>
-                    <span>Sepetim</span>
-                </a>
-                <div class="user-dropdown">
-                    <a href="/login.html" class="user-link">
-                        <span class="icon">👤</span>
-                        <span>Giriş Yap</span>
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="login.html" class="dropdown-button primary">Giriş Yap</a>
-                        <a href="register.html" class="dropdown-button secondary">Üye Ol</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main navigation -->
-        <nav class="main-nav">
-            <ul class="nav-list">
-                <li><a href="yeniler.html">YENİLER</a></li>
-                <li><a href="cok-satanlar.html">ÇOK SATANLAR</a></li>
-                <li><a href="kategoriler.html">KATEGORİLER</a></li>
-            </ul>
-        </nav>
-    </header>
-
+   
     <main class="main-content">
         <!-- Yeni Çıkanlar Slider -->
         <section class="featured-books">
@@ -58,7 +25,7 @@
                 <div class="slider-container">
                     <!-- Slide 1 -->
                     <div class="book-slide">
-                        <img src="images/deli.jpeg" alt="Bir eleştiri ustası Nurdan Gürbilek">
+                        <img src="../images/deli.jpeg" alt="Bir eleştiri ustası Nurdan Gürbilek">
                         <div class="slide-content">
                             <h3>Bir eleştiri ustası Nurdan Gürbilek</h3>
                             <p>Sessizin Payı, İkinci Hayat, Vitrinde Yaşamak ve daha fazlası...</p>
@@ -129,7 +96,7 @@
 
                 <!-- Kitap 3 -->
                 <div class="book-card">
-                    <img src="images/orkestra.jpeg">
+                    <img src="../images/orkestra.jpeg">
                     <div class="book-info">
                         <h3>Goebbels'in Propaganda</h3>
                         <p class="author">Demian Lienhard</p>
@@ -143,7 +110,7 @@
 
                 <!-- Kitap 4 -->
                 <div class="book-card">
-                    <img src="images/AlCapone.jpg" alt="Al Capone">
+                    <img src="../images/AlCapone.jpg" alt="Al Capone">
                     <div class="book-info">
                         <h3>Al Capone</h3>
                         <p class="author">S. Meralli</p>
@@ -157,7 +124,7 @@
 
                 <!-- Kitap 5 -->
                 <div class="book-card">
-                    <img src="images/beyaz.jpg" alt="Beyaz Mitolojiler">
+                    <img src="../images/beyaz.jpg" alt="Beyaz Mitolojiler">
                     <div class="book-info">
                         <h3>Beyaz Mitolojiler</h3>
                         <p class="author">Robert J.C Young</p>
@@ -171,7 +138,7 @@
 
                 <!-- Kitap 6 -->
                 <div class="book-card">
-                    <img src="images/bilim-ve-din.webp" alt="Bilim ve Din">
+                    <img src="../images/bilim-ve-din.webp" alt="Bilim ve Din">
                     <div class="book-info">
                         <h3>Bilim ve Din</h3>
                         <p class="author">Thomas Dixon, Adam R. Shapiro</p>
@@ -194,7 +161,7 @@
             <div class="book-grid">
                 <!-- Kitap 1 -->
                 <div class="book-card">
-                    <img src="images/metafizik1.jpeg" alt="Metafizik">
+                    <img src="../images/metafizik1.jpeg" alt="Metafizik">
                     <div class="book-info">
                         <h3>Metafizik</h3>
                         <p class="author">Aristoteles</p>
@@ -208,7 +175,7 @@
 
                 <!-- Kitap 2 -->
                 <div class="book-card">
-                    <img src="images/moskova.jpeg" alt="Moskova Yanıyor">
+                    <img src="../images/moskova.jpeg" alt="Moskova Yanıyor">
                     <div class="book-info">
                         <h3>Moskova Yanıyor</h3>
                         <p class="author">Grigori Petroviç Danilevski</p>
@@ -224,28 +191,31 @@
             </div>
         </section>
 
+
+        <h2>POPÜLER KİTAPLAR</h2>
         <!-- Banner Grid -->
         <section class="banner-grid">
+           
             <a href="#" class="banner-item">
-                <img src="images/metafizik.webp" alt="Bir felsefe klasiği: Metafizik">
+                <img src="../images/metafizik.webp" alt="Bir felsefe klasiği: Metafizik">
                 <div class="banner-content">
                     <h3>Bir felsefe klasiği: METAFİZİK</h3>
                 </div>
             </a>
             <a href="#" class="banner-item">
-                <img src="images/nikos.jpg" alt="Komşunun büyük ustası Nikos Kazancakis">
+                <img src="../images/nikos.jpg" alt="Komşunun büyük ustası Nikos Kazancakis">
                 <div class="banner-content">
                     <h3>Komşunun büyük ustası Nikos Kazancakis</h3>
                 </div>
             </a>
             <a href="#" class="banner-item">
-                <img src="images/bozkır.jpeg" alt="Bozkırdan dünyaya yayılan ses: Cengiz Aytmatov">
+                <img src="../images/bozkır.jpeg" alt="Bozkırdan dünyaya yayılan ses: Cengiz Aytmatov">
                 <div class="banner-content">
                     <h3>Bozkırdan dünyaya yayılan ses: Cengiz Aytmatov</h3>
                 </div>
             </a>
             <a href="#" class="banner-item">
-                <img src="images/deli.jpeg" alt="deliye övgü">
+                <img src="../images/deli.jpeg" alt="deliye övgü">
                 <div class="banner-content">
                     <h3>Deliye Övgü</h3>
                 </div>
@@ -257,7 +227,7 @@
             <h2>Ayın Yazarı</h2>
             <div class="author-content">
                 <div class="author-info">
-                    <img src="images/AlCapone.jpg" alt="Gabriel García Márquez">
+                    <img src="../images/AlCapone.jpg" alt="Gabriel García Márquez">
                     <div class="author-description">
                         <h3>Gabriel García Márquez</h3>
                         <p>"Gabo" yahut "Gabito" olarak da bilinen Nobel Ödüllü Kolombiyalı yazar Gabriel García Márquez, büyülü gerçekçilik denen üslup tarzının önde gelen temsilcilerinden biridir. Yalnızca Latin Amerika edebiyatının değil, dünya edebiyatının da en meşhur isimlerinden Márquez'in eserleri onlarca dile çevrildi ve dünyanın pek çok yerinden milyonlarca okura ulaştı. 17 Nisan 2014'te akciğer iltihabı nedeniyle Mexico City'de hayatını kaybeden yazar, ardında onlarca ölümsüz hikaye ve roman bıraktı.</p>
@@ -265,7 +235,7 @@
                 </div>
                 <div class="author-books">
                     <div class="book-card">
-                        <img src="images/kolera.jpeg" alt="Kolera Günlerinde Aşk">
+                        <img src="../images/kolera.jpeg" alt="Kolera Günlerinde Aşk">
                         <div class="book-info">
                             <h3>Kolera Günlerinde Aşk</h3>
                             <p class="author">Gabriel García Márquez</p>
@@ -274,7 +244,7 @@
                         </div>
                     </div>
                     <div class="book-card">
-                        <img src="images/yalnızlık.jpeg" alt="Yüzyıllık Yalnızlık">
+                        <img src="../images/yalnızlık.jpeg" alt="Yüzyıllık Yalnızlık">
                         <div class="book-info">
                             <h3>Yüzyıllık Yalnızlık</h3>
                             <p class="author">Gabriel García Márquez</p>
@@ -283,7 +253,7 @@
                         </div>
                     </div>
                     <div class="book-card">
-                        <img src="images/doğu.jpeg" alt="Doğu Avrupa'da Yolculuk">
+                        <img src="../images/doğu.jpeg" alt="Doğu Avrupa'da Yolculuk">
                         <div class="book-info">
                             <h3>Doğu Avrupa'da Yolculuk</h3>
                             <p class="author">Gabriel García Márquez</p>
@@ -303,7 +273,7 @@
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
     <script>
-        fetch('footer.html')
+        fetch('component/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
