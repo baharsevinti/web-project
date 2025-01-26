@@ -11,7 +11,7 @@
     <header class="header">
         <!-- Top header with logo and search -->
         <div class="top-header">
-            <a href="/" class="logo">bili.com</a>
+            <a href="/index.html" class="logo">bili.com</a>
             
             <div class="search-container">
                 <input type="search" 
@@ -27,6 +27,7 @@
                 <a href="/pages/sepetim.html" class="user-link">
                     <span class="icon">🛒</span>
                     <span>Sepetim</span>
+                    <span class="cart-count hidden">0</span>
                 </a>
                 <div class="user-dropdown">
                     <a href="/pages/login.html" class="user-link">
@@ -52,76 +53,42 @@
     </header>
 
     <main class="cart-container">
-        <h1>Sepetim (2 Ürün)</h1>
+        <h1>Sepetim (<span class="cart-count">0</span> Ürün)</h1>
         
         <div class="cart-layout">
+            <!-- Cart items will be dynamically inserted here -->
             <div class="cart-items">
-                <!-- Cart Item 1 -->
-                <div class="cart-item">
-                    <img src="../images/küvet.jpeg" alt="Küvette Bulunan Günce" class="cart-item__image">
-                    <div class="cart-item__details">
-                        <h2 class="cart-item__title">Küvette Bulunan Günce</h2>
-                        <p class="cart-item__author">Stanislaw Lem</p>
-                        <p class="cart-item__publisher">Alfa Yayınları</p>
-                    </div>
-                    <div class="cart-item__quantity">
-                        <button class="quantity-btn decrease" aria-label="Azalt">-</button>
-                        <input type="number" value="1" min="1" class="quantity-input">
-                        <button class="quantity-btn increase" aria-label="Artır">+</button>
-                    </div>
-                    <p class="cart-item__price">193,55 TL</p>
-                    <button class="cart-item__remove" aria-label="Ürünü Kaldır">
-                        <span class="icon">🗑️</span>
-                    </button>
-                </div>
-
-                <!-- Cart Item 2 -->
-                <div class="cart-item">
-                    <img src="../images/orkestra.jpeg" alt="Goebbels'in Propaganda Orkestrası" class="cart-item__image">
-                    <div class="cart-item__details">
-                        <h2 class="cart-item__title">Goebbels'in Propaganda Orkestrası</h2>
-                        <p class="cart-item__author">Demian Lienhard</p>
-                        <p class="cart-item__publisher">Delidolu</p>
-                    </div>
-                    <div class="cart-item__quantity">
-                        <button class="quantity-btn decrease" aria-label="Azalt">-</button>
-                        <input type="number" value="1" min="1" class="quantity-input">
-                        <button class="quantity-btn increase" aria-label="Artır">+</button>
-                    </div>
-                    <p class="cart-item__price">180,91 TL</p>
-                    <button class="cart-item__remove" aria-label="Ürünü Kaldır">
-                        <span class="icon">🗑️</span>
-                    </button>
+                <!-- Empty state will be shown by default -->
+                <div class="empty-state">
+                    <img src="../images/empty-cart.svg" alt="Boş sepet">
+                    <h3>Sepetiniz Boş</h3>
+                    <p>Sepetinizde ürün bulunmamaktadır.</p>
+                    <a href="/" class="browse-books">Alışverişe Başla</a>
                 </div>
             </div>
 
             <aside class="cart-summary">
                 <div class="discount-code">
                     <h2>İndirim Kodu Gir</h2>
-                    <div class="discount-input">
+                    <form class="discount-input">
                         <input type="text" placeholder="Kodunuzu giriniz" aria-label="İndirim kodu">
-                        <button class="apply-discount">Uygula</button>
-                    </div>
+                        <button type="submit" class="apply-discount">Uygula</button>
+                    </form>
                 </div>
 
                 <div class="order-summary">
-                    <h2>Sipariş Özeti</h2>
-                    <div class="summary-row">
-                        <span>Ürün Toplamı</span>
-                        <span>374,46 TL</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Kargo</span>
-                        <span>49,00 TL</span>
-                    </div>
-                    <div class="summary-total">
-                        <span>Toplam</span>
-                        <span>423,46 TL</span>
-                    </div>
-                    <button class="checkout-button">Sepeti Onayla</button>
+                    <!-- Order summary will be dynamically updated -->
+                    <button id="goToPayment" 
+                            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                            onclick="window.location.href='/pages/payment.html'">
+                        Ödemeye Geç
+                    </button>
                 </div>
             </aside>
         </div>
     </main>
+
+    <!-- Module scripts -->
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html> 

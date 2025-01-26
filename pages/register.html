@@ -4,112 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üye Ol - Bili.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/auth.css">
 </head>
 <body>
     <div class="page-container">
         <!-- Header Navigation -->
-        <header class="header">
-            <div class="top-header">
-                <a href="/" class="logo">bili.com</a>
+        <header class="header shadow-sm">
+            <div class="top-header container-fluid">
+                <a href="/index.html" class="logo navbar-brand">bili.com</a>
                 
                 <div class="search-container">
-                    <input type="search" placeholder="Merhaba, ne arıyorsun?" class="search-input">
+                    <input type="search" placeholder="Merhaba, ne arıyorsun?" class="form-control search-input">
                 </div>
 
                 <div class="user-actions">
-                    <a href="/pages/kitapligim.html" class="user-link">
+                    <a href="/pages/kitapligim.html" class="user-link btn btn-link">
                         <span class="icon">📚</span>
                         <span>Kitaplığım</span>
                     </a>
-                    <a href="/pages/sepetim.html" class="user-link">
+                    <a href="/pages/sepetim.html" class="user-link btn btn-link">
                         <span class="icon">🛒</span>
                         <span>Sepetim</span>
                     </a>
-                    <div class="user-dropdown">
-                        <a href="/pages/login.html" class="user-link">
+                    <div class="user-dropdown dropdown">
+                        <a href="/pages/login.html" class="user-link btn btn-link dropdown-toggle">
                             <span class="icon">👤</span>
                             <span>Giriş Yap</span>
                         </a>
-                        <div class="dropdown-content">
-                            <a href="/pages/login.html" class="dropdown-button primary">Giriş Yap</a>
-                            <a href="/pages/register.html" class="dropdown-button secondary">Üye Ol</a>
+                        <div class="dropdown-content dropdown-menu">
+                            <a href="/pages/login.html" class="dropdown-button primary dropdown-item">Giriş Yap</a>
+                            <a href="/pages/register.html" class="dropdown-button secondary dropdown-item">Üye Ol</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="/pages/yeniler.html">YENİLER</a></li>
-                    <li><a href="/pages/cok-satanlar.html">ÇOK SATANLAR</a></li>
-                    <li><a href="/pages/kategoriler.html">KATEGORİLER</a></li>
+            <nav class="main-nav container-fluid">
+                <ul class="nav-list nav">
+                    <li class="nav-item"><a href="/pages/yeniler.html" class="nav-link">YENİLER</a></li>
+                    <li class="nav-item"><a href="/pages/cok-satanlar.html" class="nav-link">ÇOK SATANLAR</a></li>
+                    <li class="nav-item"><a href="/pages/kategoriler.html" class="nav-link">KATEGORİLER</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Auth Container -->
-        <div class="auth-container">
-            <h1 class="auth-title">Bili'e Hoşgeldin!</h1>
-            <p class="auth-subtitle">Alışveriş yapabilmek için lütfen üye olun.</p>
+        <div class="auth-container container">
+            <h1 class="auth-title text-center mb-3">Bili'e Hoşgeldin!</h1>
+            <p class="auth-subtitle text-center mb-4">Alışveriş yapabilmek için lütfen üye olun.</p>
             
-            <div class="auth-tabs">
-                <a href="/pages/login.html" class="auth-tab">Giriş Yap</a>
-                <a href="/pages/register.html" class="auth-tab active">Üye Ol</a>
+            <div class="auth-tabs nav nav-tabs mb-4">
+                <a href="/pages/login.html" class="auth-tab nav-link">Giriş Yap</a>
+                <a href="/pages/register.html" class="auth-tab active nav-link">Üye Ol</a>
             </div>
 
             <form class="auth-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Adınız" required>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Adınız" required>
                 </div>
 
-                <div class="form-group">
-                    <input type="text" placeholder="Soyadınız" required>
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" placeholder="Soyadınız" required>
                 </div>
 
-                <div class="form-group">
-                    <input type="email" placeholder="E-posta adresi" required>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" placeholder="E-posta adresi" required>
                 </div>
 
-                <div class="form-group">
-                    <input type="email" placeholder="E-posta adresi (tekrar)" required>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" placeholder="E-posta adresi (tekrar)" required>
                 </div>
                 
-                <div class="form-group">
-                    <input type="password" placeholder="Şifre" required>
-                    <button type="button" class="password-toggle">👁️</button>
+                <div class="form-group mb-3 position-relative">
+                    <input type="password" class="form-control" placeholder="Şifre" required>
+                    <button type="button" class="password-toggle btn position-absolute end-0 top-50 translate-middle-y">👁️</button>
                 </div>
 
-                <div class="form-group">
-                    <input type="password" placeholder="Şifreniz (tekrar)" required>
-                    <button type="button" class="password-toggle">👁️</button>
+                <div class="form-group mb-3 position-relative">
+                    <input type="password" class="form-control" placeholder="Şifreniz (tekrar)" required>
+                    <button type="button" class="password-toggle btn position-absolute end-0 top-50 translate-middle-y">👁️</button>
                 </div>
 
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="marketing">
-                    <label for="marketing">Bana özel ayrıcalık ve indirimlerden haberdar olmak istiyorum.</label>
+                <div class="form-group mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="marketing">
+                        <label class="form-check-label" for="marketing">
+                            Bana özel ayrıcalık ve indirimlerden haberdar olmak istiyorum.
+                        </label>
+                    </div>
                 </div>
 
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="terms" required>
-                    <label for="terms">
-                        <a href="/terms">Üyelik Sözleşmesi</a>'ni okudum ve kabul ediyorum.
-                    </label>
+                <div class="form-group mb-3">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                            <a href="/pages/terms.html" class="text-decoration-none">Üyelik Sözleşmesi</a>'ni okudum ve kabul ediyorum.
+                        </label>
+                    </div>
                 </div>
 
-                <div class="form-group checkbox">
-                    <input type="checkbox" id="privacy" required>
-                    <label for="privacy">
-                        <a href="/privacy">Kişisel Verilerin Korunması Kanunu Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
-                    </label>
+                <div class="form-group mb-4">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="privacy" required>
+                        <label class="form-check-label" for="privacy">
+                            <a href="/pages/privacy.html" class="text-decoration-none">Kişisel Verilerin Korunması Kanunu Aydınlatma Metni</a>'ni okudum ve kabul ediyorum.
+                        </label>
+                    </div>
                 </div>
 
-                <button type="submit" class="auth-button">
+                <button type="submit" class="auth-button btn w-100">
                     Üye Ol
                     <span class="button-icon">→</span>
                 </button>
             </form>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

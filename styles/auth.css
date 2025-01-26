@@ -365,4 +365,106 @@ body {
 .icon {
     font-size: 1.2rem;
     margin-right: 0.3rem;
+}
+
+/* Bootstrap Overrides and Custom Styles */
+.nav-list {
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #f4683c;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.auth-subtitle {
+    color: #666;
+}
+
+.auth-tabs {
+    border: none;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.auth-tab {
+    border: none !important;
+    color: #666 !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.auth-tab.active {
+    color: #f4683c !important;
+    border-bottom: 2px solid #f4683c !important;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+
+.form-control:focus {
+    border-color: #f4683c;
+    box-shadow: 0 0 0 0.2rem rgba(244, 104, 60, 0.25);
+}
+
+.password-toggle {
+    background: none;
+    border: none;
+    color: #666;
+    padding: 0.5rem;
+    right: 0.5rem;
+}
+
+.forgot-password {
+    color: #f4683c;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.auth-button {
+    background-color: #f4683c !important;
+    color: white !important;
+    padding: 0.75rem !important;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.auth-button:hover {
+    background-color: #e55a30 !important;
+}
+
+.button-icon {
+    font-size: 1.25rem;
+}
+
+.form-check-input:checked {
+    background-color: #f4683c;
+    border-color: #f4683c;
 } 

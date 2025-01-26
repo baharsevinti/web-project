@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme - Bili.com</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <style>
+        .payment-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .payment-header {
+            margin-bottom: 10px;
+        }
+        
+        .logo {
+            color: #FF6B35;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 30px;
+            margin: 15px 0;
+            padding: 0;
+            list-style: none;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .nav-list a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .payment-form {
+            margin-top: 30px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .save-card {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+        
+        .save-card label {
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FF6B35;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .submit-button:hover {
+            background-color: #e85a2a;
+        }
+
+        /* Credit Card Animation Styles */
+        .credit-card {
+            position: relative;
+            width: 300px;
+            height: 180px;
+            margin: 0 auto 30px;
+            perspective: 1000px;
+        }
+
+        .credit-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+        }
+
+        .credit-card.flipped .credit-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .credit-card-front,
+        .credit-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .credit-card-front {
+            background: linear-gradient(45deg, #FF6B35, #ff8f35);
+            color: white;
+        }
+
+        .credit-card-back {
+            background: linear-gradient(45deg, #e85a2a, #FF6B35);
+            transform: rotateY(180deg);
+        }
+
+        .card-number {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin: 40px 0 20px;
+        }
+
+        .card-holder {
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .card-expiry {
+            font-size: 14px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .card-stripe {
+            background-color: #000;
+            height: 40px;
+            margin: 20px 0;
+        }
+
+        .card-cvv {
+            background-color: white;
+            color: #000;
+            padding: 10px;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .card-chip {
+            width: 50px;
+            height: 40px;
+            background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <header class="payment-header">
+            <a href="/index.html" class="logo">bili.com</a>
+        </header>
+        
+        <nav>
+            <ul class="nav-list">
+                <li><a href="/pages/yeniler.html">YENİLER</a></li>
+                <li><a href="/pages/cok-satanlar.html">ÇOK SATANLAR</a></li>
+                <li><a href="/pages/kategoriler.html">KATEGORİLER</a></li>
+            </ul>
+        </nav>
+
+        <main class="payment-form">
+            <h1>Ödeme Bilgileri</h1>
+
+            <!-- Credit Card Animation -->
+            <div class="credit-card">
+                <div class="credit-card-inner">
+                    <div class="credit-card-front">
+                        <div class="card-chip"></div>
+                        <div class="card-number">•••• •••• •••• ••••</div>
+                        <div class="card-holder">KART SAHİBİ</div>
+                        <div class="card-expiry">AA/YY</div>
+                    </div>
+                    <div class="credit-card-back">
+                        <div class="card-stripe"></div>
+                        <div class="card-cvv">•••</div>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="paymentForm">
+                <div class="form-group">
+                    <label for="cardHolder">Kart Üzerindeki İsim</label>
+                    <input type="text" 
+                           id="cardHolder" 
+                           required
+                           placeholder="Ad Soyad">
+                </div>
+
+                <div class="form-group">
+                    <label for="cardNumber">Kart Numarası</label>
+                    <input type="text" 
+                           id="cardNumber" 
+                           required
+                           maxlength="19"
+                           placeholder="1234 5678 9012 3456">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expiryDate">Son Kullanma Tarihi</label>
+                        <input type="text" 
+                               id="expiryDate" 
+                               required
+                               maxlength="5"
+                               placeholder="AA/YY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" 
+                               id="cvv" 
+                               required
+                               maxlength="3"
+                               placeholder="123">
+                    </div>
+                </div>
+
+                <div class="save-card">
+                    <input type="checkbox" id="saveCard">
+                    <label for="saveCard">Bu kartı sonraki alışverişlerim için kaydet</label>
+                </div>
+
+                <button type="submit" class="submit-button">Ödemeyi Tamamla</button>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const creditCard = document.querySelector('.credit-card');
+        const cardNumber = document.querySelector('.card-number');
+        const cardHolder = document.querySelector('.card-holder');
+        const cardExpiry = document.querySelector('.card-expiry');
+        const cardCvv = document.querySelector('.card-cvv');
+
+        // Card number formatting and animation
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{4})/g, '$1 ').trim();
+            e.target.value = value;
+            
+            // Update card display
+            cardNumber.textContent = value || '•••• •••• •••• ••••';
+        });
+
+        // Card holder name animation
+        document.getElementById('cardHolder').addEventListener('input', function(e) {
+            cardHolder.textContent = e.target.value.toUpperCase() || 'KART SAHİBİ';
+        });
+
+        // Expiry date formatting and animation
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.slice(0,2) + '/' + value.slice(2);
+            }
+            e.target.value = value;
+            
+            // Update card display
+            cardExpiry.textContent = value || 'AA/YY';
+        });
+
+        // CVV handling and card flip
+        document.getElementById('cvv').addEventListener('focus', function() {
+            creditCard.classList.add('flipped');
+        });
+
+        document.getElementById('cvv').addEventListener('blur', function() {
+            creditCard.classList.remove('flipped');
+        });
+
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+            cardCvv.textContent = e.target.value || '•••';
+        });
+
+        // Form submission
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Ödeme işlemi başarıyla tamamlandı!');
+            window.location.href = '/index.html';
+        });
+    </script>
+</body>
+</html> 
